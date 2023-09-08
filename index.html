@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!-- ver. 1 -->
+<!-- skrip -->
  <script language="JavaScript">
     var tanggallengkap = new String();
     var namahari = ("Minggu Senin Selasa Rabu Kamis Jumat Sabtu");
@@ -12,19 +14,81 @@
     var tahun = tgl.getFullYear();
     tanggallengkap = namahari[hari] + ", " +tanggal + " " + namabulan[bulan] + " " + tahun;
     </script>
+    <?php
+// Mendapatkan IP pengunjung menggunakan getenv()
+function get_client_ip() {
+    $ipaddress = '';
+    if (getenv('HTTP_CLIENT_IP'))
+        $ipaddress = getenv('HTTP_CLIENT_IP');
+    else if(getenv('HTTP_X_FORWARDED_FOR'))
+        $ipaddress = getenv('HTTP_X_FORWARDED_FOR');
+    else if(getenv('HTTP_X_FORWARDED'))
+        $ipaddress = getenv('HTTP_X_FORWARDED');
+    else if(getenv('HTTP_FORWARDED_FOR'))
+        $ipaddress = getenv('HTTP_FORWARDED_FOR');
+    else if(getenv('HTTP_FORWARDED'))
+       $ipaddress = getenv('HTTP_FORWARDED');
+    else if(getenv('REMOTE_ADDR'))
+        $ipaddress = getenv('REMOTE_ADDR');
+    else
+        $ipaddress = 'IP tidak dikenali';
+    return $ipaddress;
+}
+  
+  
+// Mendapatkan IP pengunjung menggunakan $_SERVER
+function get_client_ip_2() {
+    $ipaddress = '';
+    if (isset($_SERVER['HTTP_CLIENT_IP']))
+        $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
+    else if(isset($_SERVER['HTTP_X_FORWARDED_FOR']))
+        $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    else if(isset($_SERVER['HTTP_X_FORWARDED']))
+        $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
+    else if(isset($_SERVER['HTTP_FORWARDED_FOR']))
+        $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
+    else if(isset($_SERVER['HTTP_FORWARDED']))
+        $ipaddress = $_SERVER['HTTP_FORWARDED'];
+    else if(isset($_SERVER['REMOTE_ADDR']))
+        $ipaddress = $_SERVER['REMOTE_ADDR'];
+    else
+        $ipaddress = 'IP tidak dikenali';
+    return $ipaddress;
+}
+  
+  
+// Mendapatkan jenis web browser pengunjung
+function get_client_browser() {
+    $browser = '';
+    if(strpos($_SERVER['HTTP_USER_AGENT'], 'Netscape'))
+        $browser = 'Netscape';
+    else if (strpos($_SERVER['HTTP_USER_AGENT'], 'Firefox'))
+        $browser = 'Firefox';
+    else if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome'))
+        $browser = 'Chrome';
+    else if (strpos($_SERVER['HTTP_USER_AGENT'], 'Opera'))
+        $browser = 'Opera';
+    else if (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE'))
+        $browser = 'Internet Explorer';
+    else
+        $browser = 'Other';
+    return $browser;
+}
+?>
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v17.0" nonce="K7oG8ln8"></script>
 <html>
+<!-- skrip selesai -->
+<!-- header mulai -->
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Profil</title>    
     <style>
         body {
             font-family: monospace;
         }
         .profile {
-            text-align: left;
-        }
-        .pfp {
-            max-width: 200px;
-            border-radius: 50%;
+            text-align: left;            
         }
         a:link {
         color: green;
@@ -43,19 +107,39 @@
             height: 30px;
             margin-right: 10px;
             vertical-align: middle;
-        }    
+        } 
+        .round-frame {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+        }
+
+        .round-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }   
     </style>
 </head>
+<!-- header selesai -->
+<!-- utama -->
 <body>
     <div class="profile">
-        <small>Hari ini <script language='JavaScript'>document.write(tanggallengkap);</script></small>
-        <h4>Halo, selamat datang!</h4>
-        <div class="pfp"><img src="https://raw.githubusercontent.com/Dzaky05/kucinghitam/main/media/FB_IMG_1694165234267.jpg" alt="Foto Profil"></div>
+        <p>Hari ini <script language='JavaScript'>document.write(tanggallengkap);</script></p>
+        <p>Halo, selamat datang!</p>
+        <div class="round-frame">
+            <img src="https://raw.githubusercontent.com/Dzaky05/kucinghitam/main/media/FB_IMG_1694165234267.jpg" alt="Foto Profil">
+        </div>
         <h1>Dzaky Adinata</h1>
         <p>Hanya insan manusia yang memiliki hobi menghabiskan waktunya di internet.</p>
-    </div>        
+        <p style="color: gray;">
+        <i>"Masa depan bagaikan embusan angin~"</i>
+    </p>
+    </div>  
+<!-- SNS -->      
     <ul class="social-media-list">
-        <h3>SNS</h3>
+        <h2>SNS</h2>
         <li>
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/600px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook Logo">
             <a href="https://www.facebook.com/adinata.dzaky.1">Facebook</a>
@@ -81,22 +165,55 @@
             <a href="https://community.fandom.com/wiki/User:Dzaky05">Akun Fandom</a>
         </li>
     </ul>
+<!-- Ingfo mabar -->
 <div class="social-media-list">
-  <h3>Info Mabar</h3>  
+  <h2>Info Mabar</h2>  
    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/BanG_Dream%21_lightning_exclamation_mark_symbol.svg" alt="BD Logo">
-            <a>BanG Dream! (GL) UID: 11564446</a>
+            <a>BanG Dream! (UID: 11564446 [GL])(UID: 131003551 [JP])</a>
             <br>
-   <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/BanG_Dream%21_lightning_exclamation_mark_symbol.svg" alt="BD Logo">
-            <a>Project Sekai (GL) UID: </a>
+   <img src="https://raw.githubusercontent.com/Dzaky05/kucinghitam/main/media/ZM-4dL4R_400x400.jpg" alt="prosek Logo">
+            <a>Project Sekai (UID: 376896936298635269) </a>
+            <br>
+   <img src="https://static.wikia.nocookie.net/strikeofkings_gamepedia_en/images/a/a3/AOV_plain_logo.png/revision/latest/scale-to-width-down/75?cb=20201222121130" alt="alien Logo">
+            <a>Arena of Valor (UID: )</a>            
 </div> 
 <!-- projek -->
-<h3>Projek</h3>
+<h2>Projek</h2>
 <big>•</big> <a href="https://bandori.fandom.com/id">BanG Dream! Wiki versi bahasa Indonesia</a><br>
 <big>•</big>  <a href="https://love-live.fandom.com/id">Love Live! Wiki versi bahasa Indonesia</a>
+<!-- embed spotifi -->
+<h2>Liella! ✨</h2>
+<div style="left: 0; width: 100%; height: 352px; position: relative;"><iframe src="https://open.spotify.com/embed/album/2zzWtgloCBJXKTilI5ioJ1?utm_source=oembed" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture;"></iframe></div>
+<!-- fb -->
+<h2>Aktivitas</h2>
+<div class="fb-page" data-href="https://www.facebook.com/adinata.dzaky.1" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+<!-- blog -->
+<h2>Blog</h2>
+ <p style="color: gray;">
+        <i>Belum tersedia :(</i>
+    </p>
+<!-- galeri -->
+<h2>Galeri</h2>
+ <p style="color: gray;">
+        <i>Belum tersedia :(</i>
+    </p>
 </body>
 <br><br>
-<footer>
-<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Lisensi Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Kandungan web ini disebarluaskan dengan lisensi <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Lisensi Creative Commons Atribusi-NonKomersial 4.0 Internasional</a> (kecuali dinyatakan lain). 
-</footer>                 
+<div class="tenor-gif-embed" data-postid="10660687" data-share-method="host" data-aspect-ratio="1.77778" data-width="100%"><a href="https://tenor.com/view/love-live-sunshine-you-watanabe-gif-10660687">Love Live GIF</a>from <a href="https://tenor.com/search/love-gifs">Love GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+<hr>
+<!-- footer -->    
+<footer></footer>
+<i>aku loplep ♡</i>
+    <br><br>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Lisensi Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Kandungan web ini disebarluaskan dengan <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Lisensi Creative Commons Atribusi-NonKomersial 4.0 Internasional</a> (kecuali dinyatak
+<br>
+Terakhir diupdate: September 2023
+<h4>Informasi perangkat:</h4>
+</php
+   echo "IP anda adalah : ". get_client_ip()."<br>";
+   echo "Browser : ".get_client_browser()."<br>";
+   echo "Sistem Operasi : ".$_SERVER['HTTP_USER_AGENT'];
+?>
+</footer>
+<!-- akhir -->                 
 </html>
-
