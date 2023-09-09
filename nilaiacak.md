@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- skrip -->
+<script language="JavaScript">
+    var tanggallengkap = new String();
+    var namahari = ("Minggu Senin Selasa Rabu Kamis Jumat Sabtu");
+    namahari = namahari.split(" ");
+    var namabulan = ("Januari Februari Maret April Mei Juni Juli Agustus September Oktober November Desember");
+    namabulan = namabulan.split(" ");
+    var tgl = new Date();
+    var hari = tgl.getDay();
+    var tanggal = tgl.getDate();
+    var bulan = tgl.getMonth();
+    var tahun = tgl.getFullYear();
+    tanggallengkap = namahari[hari] + ", " +tanggal + " " + namabulan[bulan] + " " + tahun;
+    </script>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Generator Nilai Acak</title>    
+    <style>
+        body {
+            font-family: monospace;
+        }
+        a:link {
+        color: green;
+        background-color: transparent;
+        text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <p>Hari ini <script language='JavaScript'>document.write(tanggallengkap);</script><div id="DisplayClock" class="clock" onload="showTime()"></div>
+    </p>
+    <hr>
+    <br>
+  <h1>Generator Nilai Acak</h1>
+  <p>Pilih rentang nilai:</p>
+  <input type="number" id="minValue" placeholder="Min" min="0">
+  <input type="number" id="maxValue" placeholder="Maks">
+  <button onclick="generateRandomNumber()">Tampilkan Nilai Acak</button>
+  <p>Nilai acak: <big><big><span id="randomValue"></span></big></big></p>
+
+  <script>
+    function generateRandomNumber() {
+      const minValue = parseInt(document.getElementById("minValue").value);
+      const maxValue = parseInt(document.getElementById("maxValue").value);
+
+      if (!isNaN(minValue) && !isNaN(maxValue)) {
+        const randomNumber = Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue;
+        document.getElementById("randomValue").textContent = randomNumber;
+      } else {
+        alert("Masukkan rentang nilai yang valid.");
+      }
+    }
+  </script>
+</body>
+<footer>
+    <br><br><br>
+    <hr>
+    <i>aku loplep ♡</i>
+    <br><br>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Lisensi Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+    </a>
+    <br />Kandungan web ini disebarluaskan dengan <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Lisensi Creative Commons Atribusi-NonKomersial 4.0 Internasional</a> (kecuali dinyatakan lain).
+<br>
+Terakhir diupdate: September 2023
+<br>
+<input type="button" value="Refresh" onClick="document.location.reload(true)">
+</footer>
+</html>
