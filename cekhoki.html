@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- skrip -->
+ <script language="JavaScript">
+    var tanggallengkap = new String();
+    var namahari = ("Minggu Senin Selasa Rabu Kamis Jumat Sabtu");
+    namahari = namahari.split(" ");
+    var namabulan = ("Januari Februari Maret April Mei Juni Juli Agustus September Oktober November Desember");
+    namabulan = namabulan.split(" ");
+    var tgl = new Date();
+    var hari = tgl.getDay();
+    var tanggal = tgl.getDate();
+    var bulan = tgl.getMonth();
+    var tahun = tgl.getFullYear();
+    tanggallengkap = namahari[hari] + ", " +tanggal + " " + namabulan[bulan] + " " + tahun;
+    </script>
+    <script language="JavaScript">
+        function showTime(){
+	var date = new Date();
+	var h = date.getHours();
+	var m = date.getMinutes();
+	var s = date.getSeconds();
+	var session = "AM";
+	if(h == 0){
+		h = 12;
+	}
+	if (h > 12) {
+		h = h - 12 ;
+		session = "PM";
+	}
+	h = (h<10) ? "0" + h : h;
+	m = (m<10) ? "0" + m : m;
+	s = (s<10) ? "0" + s : s;
+	var time = h + ":" + m + ":" + s + " " + session;
+	document.getElementById("DisplayClock").innerText = time;	document.getElementById("DisplayClock").textContent = time;
+	setTimeout(showTime, 1000);
+}
+showTime();
+    </script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek hoki</title>
+    <style>
+        body {
+            font-family: monospace;
+        }           
+        a:link {
+        color: green;
+        background-color: transparent;
+        text-decoration: none;
+        }
+        .ruang-kosong {
+        margin: 100px; /* Atur margin sesuai kebutuhan Anda */
+        }
+        /* Gaya CSS untuk kontainer */
+        #container {
+            text-align: center;
+            margin-top: 20px;
+        }
+       
+    </style>
+</head>
+<body>
+    <p>Hari ini <script language='JavaScript'>document.write(tanggallengkap);</script><div id="DisplayClock" class="clock" onload="showTime()"></div></p>
+    <p>/ <a href="https://dzaky05.github.io/kucinghitam">kucinghitam</a> / cekhoki.html</p>
+    <hr>
+    <h2>Cek seberapa wangy gachamu hari ini!</h2>
+    <p>Klik tombolnya satu kali aja le</p>
+    <div id="container">
+        <img id="randomImage" src="https://raw.githubusercontent.com/Dzaky05/kucinghitam/main/media/IMG_20230909_075607.jpg" alt="Gambar Random" style="max-width: 50%;">
+        <p id="caption"></p>
+        <button onclick="tampilkanRandom()">Cek cuy</button>
+    </div>
+
+    <script>
+        // Array berisi objek gambar dan caption
+        var gambarDenganCaption = [
+            {
+                src: "https://raw.githubusercontent.com/Dzaky05/kucinghitam/main/media/FB_IMG_1689497676356.jpg",
+                caption: "Tidak terduga 😯"
+            },
+            {
+                src: "https://raw.githubusercontent.com/Dzaky05/kucinghitam/main/media/FB_IMG_1689950060479.jpg",
+                caption: "Alhamdulilah. Hoki dikit 😁"
+            },
+            {
+                src: "https://raw.githubusercontent.com/Dzaky05/kucinghitam/main/media/FB_IMG_1689992850301.jpg",
+                caption: "Ampas kang 😭"
+            },
+            {
+                src: "https://raw.githubusercontent.com/Dzaky05/kucinghitam/main/media/FB_IMG_1689992854941.jpg",
+                caption: "Gacor kang"
+            },
+            {
+                src: "https://raw.githubusercontent.com/Dzaky05/kucinghitam/main/media/FB_IMG_1690800873736.jpg",
+                caption: "Sebaiknya jangan gacha"
+            },
+            {
+                src: "https://raw.githubusercontent.com/Dzaky05/kucinghitam/main/media/FB_IMG_1689674260451.jpg",
+                caption: "Rungkad kang 😭"
+            }
+        ];
+
+        function tampilkanRandom() {
+            var randomIndex = Math.floor(Math.random() * gambarDenganCaption.length);
+            var randomItem = gambarDenganCaption[randomIndex];
+
+            var randomImageElement = document.getElementById("randomImage");
+            var captionElement = document.getElementById("caption");
+
+            randomImageElement.src = randomItem.src;
+            captionElement.textContent = randomItem.caption;
+        }
+    </script>
+    <br>
+    <span class="material-symbols-outlined">
+warning
+</span> Note: Jangan terlalu percaya dengan hasil diatas. Gacha tinggal gacha. Masalah hoki belakangan :D
+</body>
+<footer>
+    <div class="ruang-kosong"></div>
+    <hr>
+    <i>aku loplep ♡</i>
+    <br><br>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Lisensi Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Kandungan web ini disebarluaskan dengan <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Lisensi Creative Commons Atribusi-NonKomersial 4.0 Internasional</a> (kecuali dinyatak
+<br>
+Terakhir diupdate: September 2023
+<br>
+<input type="button" value="Refresh" onClick="document.location.reload(true)">
+</footer>
+</html>
