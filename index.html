@@ -15,9 +15,35 @@
     tanggallengkap = namahari[hari] + ", " +tanggal + " " + namabulan[bulan] + " " + tahun;
     </script>
     <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v17.0" nonce="K7oG8ln8"></script>
-<html>
-<!-- skrip selesai -->
+<script>
+        // Fungsi untuk memperbarui waktu
+        function tampilkanWaktu() {
+            var waktuSekarang = new Date();
+            var jam = waktuSekarang.getHours();
+            var menit = waktuSekarang.getMinutes();
+            var detik = waktuSekarang.getSeconds();
+
+            // Format waktu dengan tambahan nol pada angka satu digit
+            if (jam < 10) {
+                jam = "0" + jam;
+            }
+            if (menit < 10) {
+                menit = "0" + menit;
+            }
+            if (detik < 10) {
+                detik = "0" + detik;
+            }
+
+            var waktuString = jam + ":" + menit + ":" + detik;
+            document.getElementById("waktu").innerHTML = waktuString;
+
+            // Perbarui waktu setiap detik
+            setTimeout(tampilkanWaktu, 1000);
+        }
+
+        // Panggil fungsi untuk pertama kali
+        tampilkanWaktu();
+    </script><!-- skrip selesai -->
 <!-- header mulai -->
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -65,7 +91,7 @@
 <!-- utama -->
 <body>
     <div class="profile">
-        <p>Hari ini <script language='JavaScript'>document.write(tanggallengkap);</script></p>
+        <p>Hari ini <script language='JavaScript'>document.write(tanggallengkap);</script> <div id="waktu"></div></p>
         <p>Halo, selamat datang!</p>
         <div class="round-frame">
             <img src="https://raw.githubusercontent.com/Dzaky05/kucinghitam/main/media/FB_IMG_1694165234267.jpg" alt="Foto Profil">
@@ -129,9 +155,6 @@
 <!-- embed spotifi -->
 <h2>Liella! ✨</h2>
 <div style="left: 0; width: 100%; height: 352px; position: relative;"><iframe src="https://open.spotify.com/embed/album/2zzWtgloCBJXKTilI5ioJ1?utm_source=oembed" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture;"></iframe></div>
-<!-- fb -->
-<h2>Aktivitas</h2>
-<div class="fb-page" data-href="https://www.facebook.com/adinata.dzaky.1" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
 <!-- blog -->
 <h2>Blog</h2>
  <p style="color: gray;">
