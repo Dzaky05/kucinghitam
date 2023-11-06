@@ -1,37 +1,95 @@
 <!DOCTYPE html>
-<!-- ver. 1 -->
-<!-- skrip -->
- <script language="JavaScript">
-    var tanggallengkap = new String();
-    var namahari = ("Minggu Senin Selasa Rabu Kamis Jumat Sabtu");
-    namahari = namahari.split(" ");
-    var namabulan = ("Januari Februari Maret April Mei Juni Juli Agustus September Oktober November Desember");
-    namabulan = namabulan.split(" ");
-    var tgl = new Date();
-    var hari = tgl.getDay();
-    var tanggal = tgl.getDate();
-    var bulan = tgl.getMonth();
-    var tahun = tgl.getFullYear();
-    tanggallengkap = namahari[hari] + ", " +tanggal + " " + namabulan[bulan] + " " + tahun;
+<!-- ver. 2 -->
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>kucinghitam</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="media/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    </head>
+    <script>
+        function scrollPageDown() {
+            window.scrollBy(0, window.innerHeight);
+        }
+        function scrollPageUp() {
+            window.scrollBy(0, -window.innerHeight);
+        }
     </script>
-<!-- skrip selesai -->
-<!-- header mulai -->
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Profil</title>
     <style>
         body {
-            font-family: monospace;
+            color: ;
+            font-family: noto sans;
         }
-        .profile {
-            text-align: left;            
+            .footer {
+      position: ;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #212429;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      border-top: 1px solid #dee2e6;
+    }
+        .kotak {
+            background-color: #EEEEEE;
+            color: black;
+            padding: 10px;
         }
-        a:link {
-        color: green;
-        background-color: transparent;
-        text-decoration: none;
+        .social-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
         }
+
+        .social-list li {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .social-list li:last-child {
+            margin-right: 0;
+        }
+
+        .social-list a {
+            text-decoration: none;
+            color: #333;
+        }
+        .dotted-hr {
+            height: 0;
+            border: none;
+            border-top: 5px dotted #333;
+        }
+        .round-frame {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+        }
+        .round-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        } 
         .social-media-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .social-media-list li {
+            margin-bottom: 10px;
+        }
+        .social-list img {
+            margin-right: 10px;
+            vertical-align: middle;
+        } 
+                .social-media-list {
             list-style-type: none;
             padding: 0;
         }
@@ -44,133 +102,111 @@
             margin-right: 10px;
             vertical-align: middle;
         } 
-        .round-frame {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            overflow: hidden;
-        }
-
-        .round-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        } 
-        #waktu {
-            font-size: ;
-        }
-        /* CSS untuk header */
-        header {
-            background-color: #3264a8;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-            
-        }
-
-        /* CSS untuk menu */
-        ul.menu {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        ul.menu li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        ul.menu li:last-child {
-            margin-right: 0;
-        }
-
-        ul.menu li a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-        }
     </style>
-</head>
-<!-- header selesai -->
-<!-- utama -->
-<body>
-    <div class="profile">
-        <header>
-        <p>Hari ini <script language='JavaScript'>document.write(tanggallengkap);</script><div id="waktu"></div>
-        <script>
-        // Fungsi untuk memperbarui waktu
-        function tampilkanWaktu() {
-            var waktuSekarang = new Date();
-            var jam = waktuSekarang.getHours();
-            var menit = waktuSekarang.getMinutes();
-            var detik = waktuSekarang.getSeconds();
-
-            // Format waktu dengan tambahan nol pada angka satu digit
-            if (jam < 10) {
-                jam = "0" + jam;
-            }
-            if (menit < 10) {
-                menit = "0" + menit;
-            }
-            if (detik < 10) {
-                detik = "0" + detik;
-            }
-
-            var waktuString = jam + ":" + menit + ":" + detik;
-            document.getElementById("waktu").innerHTML = waktuString;
-
-            // Perbarui waktu setiap detik
-            setTimeout(tampilkanWaktu, 1000);
-        }
-
-        // Panggil fungsi untuk pertama kali
-        tampilkanWaktu();
-    </script></p>
-         <audio controls autoplay>
-        <source src="https://raw.githubusercontent.com/Dzaky05/kucinghitam/main/media/y2mate.com - Our Town Our Life" type="audio/mpeg">
-        Maaf, peramban Anda tidak mendukung audio.
-         </audio>
-    </header>
-        <p>Halo, selamat datang!</p>
-        <div class="round-frame">
-            <img src="https://raw.githubusercontent.com/Dzaky05/kucinghitam/main/media/FB_IMG_1694165234267.jpg" alt="Foto Profil">
-        </div>
-        <h1>Dzaky Adinata</h1>
-        <p>Hanya seorang insan yang memiliki hobi menghabiskan waktunya di internet.</p>
-        <p style="color: gray;">
-        <i>"Bukan masalah kamu bisa atau tak bisa, yang terpenting adalah kamu mau atau tidak."</i>
+        <div class="d-flex" id="wrapper">
+            <!-- Page content wrapper-->
+            <div id="page-content-wrapper">
+                <!-- Top navigation-->
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
+                    <div class="container-fluid">
+                      <!--<img src="https://raw.githubusercontent.com/Dzaky05/kucinghitam/main/media/IMG_20231105_215514.png" width ="80" alt="Logo">-->
+                      <a style="color: white; text-align: left; font-size: 20px">kucinghitam</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                                <li class="nav-item active"><a class="nav-link" href="https://dzaky05.github.io/kucinghitam/index.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="https://dzaky05.github.io/kucinghitam/work.html">Works</a></li>
+                                <li class="nav-item"><a class="nav-link" href="https://dzaky05.github.io/kucinghitam/contact.html">Contact</a></li>
+                                <li class="nav-item dropdown">
+                                  <!--
+                                  <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#!">Action</a>
+                                        <a class="dropdown-item" href="#!">Another action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#!">Something else here</a>
+                                    </div>
+                                  -->
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!-- Page content-->
+                <div class="container-fluid">
+                    <h1 class="mt-4">Selamat Datang!</h1>
+                    <hr class="dotted-hr">
+                   <div class="dotted-line"></div>
+                  <center>
+                  <img src="https://raw.githubusercontent.com/Dzaky05/kucinghitam/main/media/IMG_20231105_193609.jpg" style="width: 100%; max-width: 100%; alt="member Liella!"">
+                  </center>
+                  <br><br>
+                    <center>
+                        <p><font size="6">追いかける夢の先で</font></p>
+                        <font size="4">Oikakeru Yume no Saki de</font>
+                        <p style="color: gray;">
+        <i>Beyond the Dream We Chase</i></center>
     </p>
-    </div>  
-<!-- SNS -->      
-    <ul class="social-media-list">
-        <h2>SNS</h2>
-        <li>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/600px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook Logo">
-            <a href="https://www.facebook.com/adinata.dzaky.1">Facebook</a>
+    <center><big><p style="color: gray;">
+    <button onclick="scrollPageDown()" class="navbar-toggler" type="button"><span class="material-symbols-outlined">
+expand_more
+</span></p></button>
+    </big>
+    </center>
+
+    <p style="margin-bottom: 200px;">
+     
+     <h1 class="mt-4">Profil</h1>
+                    <hr class="dotted-hr">   
+                    <div class="kotak">
+                    <div class="round-frame">
+            <img src="https://raw.githubusercontent.com/Dzaky05/kucinghitam/main/media/FB_IMG_1694165234267.jpg" alt="penggambaran ybs secara rill">
+        </div>
+        <h2>Dzaky Adinata</h2>
+        <p>yousoro!</p>
+       
+        <p>Halo semuanya! Namaku Dzaky Adinata, seorang pemuda yang hobi menggambar dan menulis, kadang ngoding (<s>ngo...</s>), serta tertarik dengan budaya Jepang (dengan kata lain, <i>otaku</i>).</p>
+        <p>Salam kenal~</p>
+        
+        <ul class="social-list">
+<li>
+    <a href="https://www.facebook.com/adinata.dzaky.1">
+            <img src="https://raw.githubusercontent.com/Dzaky05/kucinghitam/main/media/623dd7d270712bdafc63c38a.png" width="50" height:"50" alt="Facebook Logo">
+            
         </li>
         <li>
-            <img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.768.png" alt="Twitter Logo">
-            <a href="https://twitter.com/dzakyadinata">Twitter</a>
+            <a href="https://instagram.com/dzaky_adinata">
+            <img src="https://raw.githubusercontent.com/Dzaky05/kucinghitam/main/media/pngwing.com.png" width ="40" height:"40" alt="Instagram Logo">
+            
         </li>
         <li>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram Logo">
-            <a href="https://instagram.com/dzaky_adinata">Instagram</a> [<a href="https://instagram.com/hikawa_adinata">akun 2</a>]
-        </li>
-        <li>
-            <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="Discord Logo">
-            <a>Adinata#3440</a>
-        </li>
-        <li>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Wikipedia-logo-v2.svg" alt="Wikipedia Logo">
-            <a href="https://id.wikipedia.org/wiki/Pengguna:Blue_Sonic">Akun Wikipedia</a>
-        </li>
-        <li>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Fandom_heart-logo.svg" alt="Fandom Logo">
-            <a href="https://community.fandom.com/wiki/User:Dzaky05">Akun Fandom</a>
+            <a href="https://twitter.com/dzakyadinata">
+            <img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.768.png" width="30" height:"30" alt="Twitter Logo"></a>
+            
         </li>
     </ul>
-<!-- Ingfo mabar -->
-  <h2>Info Mabar</h2>  
-     <ul class="social-media-list">
+    </div>
+    <br>
+
+             <h1 class="mt-4">Mahakarya</h1>
+             <hr class="dotted-hr">  
+                    <div class="kotak">
+              <p> https://dzaky05.github.io/kucinghitam/nilaiacak.html      
+              </p>  
+                    </div>
+             <br>
+             <h1 class="mt-4">Playlist</h1>
+                    <hr class="dotted-hr">  
+                    <div class="kotak">
+                    <p>A playlist containing my favorite songs, I thought you might also like~</p> 
+        <div style="left: 0; width: 100%; height: 352px; position: relative;"><iframe src="https://open.spotify.com/embed/playlist/5JgRxVjgDPN3yXFiG5IAcU?utm_source=oembed" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture;"></iframe></div></div>
+        <br>
+        <h1 class="mt-4">Info Mabar</h1>
+                    <hr class="dotted-hr">
+                    <div class="kotak">
+                    Aktif tiap malam (nokturnal). 
+                    <br> 
+        <ul class="social-media-list">
       <li>
    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/BanG_Dream%21_lightning_exclamation_mark_symbol.svg" alt="BD Logo">
             <a>BanG Dream! (UID: 11564446 [GL])</a>
@@ -179,66 +215,31 @@
    <img src="https://raw.githubusercontent.com/Dzaky05/kucinghitam/main/media/ZM-4dL4R_400x400.jpg" alt="prosek Logo">
             <a>Project Sekai (UID: 376896936298635269) </a>
       </li>
-      <!--
-      <li>
-   <img src="https://static.wikia.nocookie.net/strikeofkings_gamepedia_en/images/a/a3/AOV_plain_logo.png/revision/latest/scale-to-width-down/75?cb=20201222121130" alt="alien Logo">
-            <a>Arena of Valor (UID: )</a> 
-      </li>
-      -->
-   </ul> 
-<!-- projek -->
-<h2>Projek</h2>
-<big>•</big> <a href="https://bandori.fandom.com/id">BanG Dream! Wiki versi bahasa Indonesia</a><br>
-<big>•</big>  <a href="https://love-live.fandom.com/id">Love Live! Wiki versi bahasa Indonesia</a>
-<!-- embed spotifi -->
-<h2>Playlist ✨</h2>
-<div style="left: 0; width: 100%; height: 352px; position: relative;"><iframe src="https://open.spotify.com/embed/playlist/0IuEqB9g8W3Dvc15ujIw1X?utm_source=oembed" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture;"></iframe></div>
- <!-- blog -->
-<h2>Blog</h2>
- <p style="color: gray;">
-        <i>Belum tersedia :(</i>
+      </div>
+                        </div>
+            </div>
+        </div>
+            <p style="margin-bottom: 100px;">
+                    <center><big><p style="color: gray;">
+    <button onclick="scrollPageUp()" class="navbar-toggler" type="button"><span class="material-symbols-outlined">
+expand_less
+</span></p></button>
+    </big>
+    </center>
+            <p style="margin-bottom: 100px;">
+        </body>
+        <footer>
+             <div class="footer">
+              <p>
+                  © 2023, Dzaky Adinata
+</p>
+<p>Hosting via <a href="https://github.com/Dzaky05/kucinghitam/">
+    <img src="https://github.githubassets.com/assets/GitHub-Logo-ee398b662d42.png" style="width: 70px;">
     </p>
-<!-- tool -->
- <h2>Tools</h2>
- <ul>
-  <li><a href="https://dzaky05.github.io/kucinghitam/nilaiacak.html">Generator Nilai Acak</a>
-  </li>
-  <li><a href="https://dzaky05.github.io/kucinghitam/cekhoki.html">Cek Hoki</a></li>
- </ul>
-<!-- galeri -->
-<h2>Galeri</h2>
- <p style="color: gray;">
-        <i>Belum tersedia :(</i>
-    </p>
-</body>
-<br><br>
-<div class="tenor-gif-embed" data-postid="10660687" data-share-method="host" data-aspect-ratio="1.77778" data-width="100%"><a href="https://tenor.com/view/love-live-sunshine-you-watanabe-gif-10660687">Love Live GIF</a>from <a href="https://tenor.com/search/love-gifs">Love GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-<hr>
-<!-- footer -->    
-<footer>
-<i>aku loplep ♡</i>
-    <br><br>
-<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Lisensi Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Kandungan web ini disebarluaskan dengan <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Lisensi Creative Commons Atribusi-NonKomersial 4.0 Internasional</a> (kecuali dinyatakan lain).
-<br>
-    <!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
-<!-- Histats.com  START  (aync)-->
-<script type="text/javascript">var _Hasync= _Hasync|| [];
-_Hasync.push(['Histats.start', '1,4809952,4,605,110,55,00011010']);
-_Hasync.push(['Histats.fasi', '1']);
-_Hasync.push(['Histats.track_hits', '']);
-(function() {
-var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
-hs.src = ('//s10.histats.com/js15_as.js');
-(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
-})();</script>
- <!--
-<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4809952&101" alt="" border="0"></a></noscript>
- -->
-<!-- Histats.com  END  -->
- <br>
-Terakhir diupdate: 7 Oktober 2023
- <br>
- <input type="button" value="Refresh" onClick="document.location.reload(true)">
-</footer>
-<!-- akhir -->                 
+             </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
 </html>
