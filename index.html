@@ -11,6 +11,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     </head>
     <script>
         function scrollPageDown() {
@@ -39,28 +40,32 @@
         .kotak {
             background-color: #EEEEEE;
             color: black;
+            border-radius: 6px;
             padding: 10px;
         }
-        .social-list {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        .social-list li {
-            margin-right: 10px;
-            margin-bottom: 10px;
-        }
-
-        .social-list li:last-child {
-            margin-right: 0;
-        }
-
-        .social-list a {
-            text-decoration: none;
-            color: #333;
-        }
+.social-media-icon {
+	    padding: 10px 12px 9px 12px;
+	    background: #222;
+	    color: #fff;
+	    margin: 5px;
+	    border-radius: 4px;
+	}
+	a.social-media-icon:hover{
+	    background: #fff!important;
+	    color: #222!important;
+	}
+	.facebook{
+		background:  #3c5a98!important;
+	}
+	.twitter{
+		background: #1da1f2!important;
+	}
+	.pixiv{
+		background: #FFF!important;;
+	}
+	.instagram{
+		background: #FE0094!important;;
+	}
         .dotted-hr {
             height: 0;
             border: none;
@@ -88,7 +93,7 @@
             margin-right: 10px;
             vertical-align: middle;
         } 
-                .social-media-list {
+        .social-media-list {
             list-style-type: none;
             padding: 0;
         }
@@ -131,6 +136,7 @@
                         </div>
                     </div>
                 </nav>
+                
                 <!-- Page content-->
                 <div class="container-fluid">
                     <h1 class="mt-4">Selamat Datang!</h1>
@@ -166,24 +172,22 @@ expand_more
        
         <p>Halo semuanya! Namaku Dzaky Adinata, seorang pemuda yang hobi menggambar dan menulis, kadang ngoding (<s>ngo...</s>), serta tertarik dengan budaya Jepang (dengan kata lain, <i>otaku</i>).</p>
         <p>Salam kenal~</p>
-        
-        <ul class="social-list">
-<li>
-    <a href="https://www.facebook.com/adinata.dzaky.1">
-            <img src="https://raw.githubusercontent.com/Dzaky05/kucinghitam/main/media/623dd7d270712bdafc63c38a.png" width="50" height:"50" alt="Facebook Logo">
-            
-        </li>
-        <li>
-            <a href="https://instagram.com/dzaky_adinata">
-            <img src="https://raw.githubusercontent.com/Dzaky05/kucinghitam/main/media/pngwing.com.png" width ="40" height:"40" alt="Instagram Logo">
-            
-        </li>
-        <li>
-            <a href="https://twitter.com/dzakyadinata">
-            <img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.768.png" width="30" height:"30" alt="Twitter Logo"></a>
-            
-        </li>
-    </ul>
+        <br>
+<a class="social-media-icon facebook" href="https://www.facebook.com/adinata.dzaky.1">
+	<span class="fab fa-facebook"></span></a>
+<!-- Twitter -->
+<a class="social-media-icon twitter" href="https://twitter.com/dzakyadinata">
+	<span class="fab fa-twitter"></span></a>
+<!-- Instagram -->
+<a class="social-media-icon instagram" href="https://instagram.com/dzaky_adinata">
+	<span class="fab fa-instagram"></span></a>
+	<!-- GH -->
+	<a class="social-media-icon github" href="https://github.com/Dzaky05"><span class="fab fa-github"></span></a>
+<!-- Pixiv -->
+<a class="social-media-icon pixiv" href="https://www.pixiv.net/en/users/76135039">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Pixiv_Icon.svg" style="width: 15px">	
+</a>
+<br><br>
     </div>
     <br>
 
@@ -229,11 +233,27 @@ expand_less
         </body>
         <footer>
              <div class="footer">
+                 <br>
+                 <a class="social-media-icon facebook" href="https://www.facebook.com/adinata.dzaky.1">
+	<span class="fab fa-facebook"></span></a>
+<!-- Twitter -->
+<a class="social-media-icon twitter" href="https://twitter.com/dzakyadinata">
+	<span class="fab fa-twitter"></span></a>
+<!-- Instagram -->
+<a class="social-media-icon instagram" href="https://instagram.com/dzaky_adinata">
+	<span class="fab fa-instagram"></span></a>
+	<!-- GH -->
+	<a class="social-media-icon github" href="https://github.com/Dzaky05"><span class="fab fa-github"></span></a>
+<!-- Pixiv -->
+<a class="social-media-icon pixiv" href="https://www.pixiv.net/en/users/76135039">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Pixiv_Icon.svg" style="width: 15px">	
+</a>
+<br><br>             
               <p>
                   © 2023, Dzaky Adinata
 </p>
-<p>Hosting via <a href="https://github.com/Dzaky05/kucinghitam/">
-    <img src="https://github.githubassets.com/assets/GitHub-Logo-ee398b662d42.png" style="width: 70px;">
+<p>Hosting via <a href="https://github.com/Dzaky05/kucinghitam/">GitHub
+    <!-- <img src="https://github.githubassets.com/assets/GitHub-Logo-ee398b662d42.png" style="width: 70px;"> -->
     </p>
              </div>
         </footer>
