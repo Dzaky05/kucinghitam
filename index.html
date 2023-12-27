@@ -1,48 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>kucinghitam</title>
+<!-- ver. 1 -->
+<!-- skrip -->
+ <script language="JavaScript">
+    var tanggallengkap = new String();
+    var namahari = ("Sunday Monday Tuesday Wednesday Thursday Friday Saturday");
+    namahari = namahari.split(" ");
+    var namabulan = ("January February March April May June July August September October November December");
+    namabulan = namabulan.split(" ");
+    var tgl = new Date();
+    var hari = tgl.getDay();
+    var tanggal = tgl.getDate();
+    var bulan = tgl.getMonth();
+    var tahun = tgl.getFullYear();
+    tanggallengkap = namahari[hari] + ", " +tanggal + " " + namabulan[bulan] + " " + tahun;
+    </script>
+<!-- skrip selesai -->
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    </head>
-    <script>
-        function scrollPageDown() {
-            window.scrollBy(0, window.innerHeight);
-        }
-        function scrollPageUp() {
-            window.scrollBy(0, -window.innerHeight);
-        }
-    </script>
+<!-- header mulai -->
+<head>
+            <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Mainpage</title>
     <style>
+        
         body {
-            color: ;
-            font-family: noto sans;
-        }
-            .footer {
-      position: ;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      background-color: #212429;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      border-top: 1px solid #dee2e6;
-    }
-        .kotak {
-            background-color: #EEEEEE;
-            color: black;
-            border-radius: 6px;
-            padding: 10px;
-        }
+            font-family: monospace;
+            text-align: center;            
+        }   
+        a:link {
+        color: green;
+        background-color: transparent;
+        text-decoration: none;
+        }    
 .social-media-icon {
 	    padding: 10px 12px 9px 12px;
 	    background: #222;
@@ -61,205 +55,66 @@
 		background: #1da1f2!important;
 	}
 	.pixiv{
-		background: #FFF!important;;
+		background: #0096fa!important;;
 	}
 	.instagram{
 		background: #FE0094!important;;
 	}
-        .dotted-hr {
-            height: 0;
-            border: none;
-            border-top: 5px dotted #333;
-        }
+	.github{
+	 background: #000000!important;;   
+	}
         .round-frame {
             border-radius: 50%;
             width: 150px;
             height: 150px;
             overflow: hidden;
         }
+
         .round-frame img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         } 
-        .social-media-list {
-            list-style-type: none;
-            padding: 0;
+        #waktu {
+            font-size: ;
         }
-        .social-media-list li {
-            margin-bottom: 10px;
+        /* CSS untuk header */
+        header {
+            background-color: #3264a8;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            
         }
-        .social-list img {
-            margin-right: 10px;
-            vertical-align: middle;
-        } 
-        .social-media-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .social-media-list li {
-            margin-bottom: 10px;
-        }
-        .social-media-list img {
-            width: 30px;
-            height: 30px;
-            margin-right: 10px;
-            vertical-align: middle;
-        } 
     </style>
-        <div class="d-flex" id="wrapper">
-            <!-- Page content wrapper-->
-            <div id="page-content-wrapper">
-                <!-- Top navigation-->
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
-                    <div class="container-fluid">
-                      <!--<img src="https://raw.githubusercontent.com/Dzaky05/kucinghitam/main/media/IMG_20231105_215514.png" width ="80" alt="Logo">-->
-                      <a style="color: white; text-align: left; font-size: 20px">kucinghitam</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                                <li class="nav-item active"><a class="nav-link" href="https://dzaky05.github.io/kucinghitam/index.html">Home</a></li>
-                                <li class="nav-item"><a class="nav-link" href="https://dzaky05.github.io/kucinghitam/work.html">Works</a></li>
-                                <li class="nav-item"><a class="nav-link" href="https://dzaky05.github.io/kucinghitam/contact.html">Contact</a></li>
-                                <li class="nav-item dropdown">
-                                  <!--
-                                  <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#!">Action</a>
-                                        <a class="dropdown-item" href="#!">Another action</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#!">Something else here</a>
-                                    </div>
-                                  -->
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-                
-                <!-- Page content-->
-                <div class="container-fluid">
-                    <h1 class="mt-4">Selamat Datang!</h1>
-                    <hr class="dotted-hr">
-                   <div class="dotted-line"></div>
-                  <center>
-                  <img src="https://raw.githubusercontent.com/Dzaky05/kucinghitam/main/media/IMG_20231105_193609.jpg" style="width: 100%; max-width: 100%; alt="member Liella!"">
-                  </center>
-                  <br><br>
-                    <center>
-                        <p><font size="6">追いかける夢の先で</font></p>
-                        <font size="4">Oikakeru Yume no Saki de</font>
-                        <p style="color: gray;">
-        <i>Beyond the Dream We Chase</i></center>
-    </p>
-    <center><big><p style="color: gray;">
-    <button onclick="scrollPageDown()" class="navbar-toggler" type="button"><span class="material-symbols-outlined">
-expand_more
-</span></p></button>
-    </big>
-    </center>
-
-    <p style="margin-bottom: 200px;">
-     
-     <h1 class="mt-4">Profil</h1>
-                    <hr class="dotted-hr">   
-                    <div class="kotak">
-                    <div class="round-frame">
-            <img src="https://raw.githubusercontent.com/Dzaky05/kucinghitam/main/media/FB_IMG_1694165234267.jpg" alt="penggambaran ybs secara rill">
-        </div>
-        <h2>Dzaky Adinata</h2>
-        <!--<p>yousoro!</p>-->
-       
-        <p>Hai<!--Halo semuanya! Namaku Dzaky Adinata, seorang pemuda yang hobi menulis, kadang ngoding, serta tertarik dengan budaya Jepang (dengan kata lain, <i>otaku</i>).</p>
-        <p>Salam kenal~--></p>
-        <br>
-<a class="social-media-icon facebook" href="https://www.facebook.com/adinata.dzaky.1">
+</head>
+<!-- header selesai -->
+<!-- utama -->
+<body>
+        <p style="margin-bottom: 120px;"></p>
+            <img src="https://raw.githubusercontent.com/kyynata/kucinghitam/main/media/Untitled28_20231227135058.png" alt="kanon sayang" style="width: 150px">
+            <h2>Dzaky Adinata</h2>
+            <p>光る風になろう　We got dream!</p>
+            <a class="social-media-icon facebook" href="https://www.facebook.com/adinata.dzaky.1" style="color: #fff">
 	<span class="fab fa-facebook"></span></a>
 <!-- Twitter -->
-<a class="social-media-icon twitter" href="https://twitter.com/dzakyadinata">
+<a class="social-media-icon twitter" href="https://twitter.com/dzakyadinata" style="color: #fff">
 	<span class="fab fa-twitter"></span></a>
 <!-- Instagram -->
-<a class="social-media-icon instagram" href="https://instagram.com/dzaky_adinata">
+<a class="social-media-icon instagram" href="https://instagram.com/dzaky_adinata" style="color: #fff">
 	<span class="fab fa-instagram"></span></a>
 	<!-- GH -->
-	<a class="social-media-icon github" href="https://github.com/Dzaky05"><span class="fab fa-github"></span></a>
+	<a class="social-media-icon github" href="https://github.com/Dzaky05" style="color: #fff"><span class="fab fa-github"></span></a>
 <!-- Pixiv -->
 <a class="social-media-icon pixiv" href="https://www.pixiv.net/en/users/76135039">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Pixiv_Icon.svg" style="width: 15px">	
+    <img src="https://raw.githubusercontent.com/kyynata/kucinghitam/main/media/img_2_1703640314134.jpg" style="width: 15px">	
 </a>
 <br><br>
-    </div>
+<p><a href="https://kyynata.github.io/kucinghitam/gallery.html">Gallery</a> • <a href="https://kyynata.github.io/kucinghitam/project.html">Project</a></p>
+</body>
+<footer>
     <br>
-
-             <h1 class="mt-4">Mahakarya</h1>
-             <hr class="dotted-hr">  
-                    <div class="kotak">
-              <p> https://dzaky05.github.io/kucinghitam/nilaiacak.html      
-              </p>  
-                    </div>
-             <br>
-             <h1 class="mt-4">Playlist</h1>
-                    <hr class="dotted-hr">  
-                    <div class="kotak">
-                    <p>A playlist containing my favorite songs, I thought you might also like~</p> 
-        <div style="left: 0; width: 100%; height: 352px; position: relative;"><iframe src="https://open.spotify.com/embed/playlist/0IuEqB9g8W3Dvc15ujIw1X?utm_source=oembed" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture;"></iframe></div>
-		    </div>
-			    <br>
-        <h1 class="mt-4">Info Mabar</h1>
-                    <hr class="dotted-hr">
-                    <div class="kotak">
-                    Aktif tiap malam (nokturnal). 
-                    <br> 
-        <ul class="social-media-list">
-      <li>
-   <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/BanG_Dream%21_lightning_exclamation_mark_symbol.svg" alt="BD Logo">
-            <a>BanG Dream! (UID: 11564446 [GL])</a>
-      </li>
-      <li>
-   <img src="https://raw.githubusercontent.com/Dzaky05/kucinghitam/main/media/ZM-4dL4R_400x400.jpg" alt="prosek Logo">
-            <a>Project Sekai (UID: 376896936298635269) </a>
-      </li>
-      </div>
-                        </div>
-            </div>
-        </div>
-            <p style="margin-bottom: 100px;">
-                    <center><big><p style="color: gray;">
-    <button onclick="scrollPageUp()" class="navbar-toggler" type="button"><span class="material-symbols-outlined">
-expand_less
-</span></p></button>
-    </big>
-    </center>
-            <p style="margin-bottom: 100px;">
-        </body>
-        <footer>
-             <div class="footer">
-                 <br>
-                 <a class="social-media-icon facebook" href="https://www.facebook.com/adinata.dzaky.1">
-	<span class="fab fa-facebook"></span></a>
-<!-- Twitter -->
-<a class="social-media-icon twitter" href="https://twitter.com/dzakyadinata">
-	<span class="fab fa-twitter"></span></a>
-<!-- Instagram -->
-<a class="social-media-icon instagram" href="https://instagram.com/dzaky_adinata">
-	<span class="fab fa-instagram"></span></a>
-	<!-- GH -->
-	<a class="social-media-icon github" href="https://github.com/Dzaky05"><span class="fab fa-github"></span></a>
-<!-- Pixiv -->
-<a class="social-media-icon pixiv" href="https://www.pixiv.net/en/users/76135039">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Pixiv_Icon.svg" style="width: 15px">	
-</a>
-<br><br>             
-              <p>
-                  © 2023, Dzaky Adinata
-</p>
-<p>Hosting via <a href="https://github.com/Dzaky05/kucinghitam/">GitHub
-    <!-- <img src="https://github.githubassets.com/assets/GitHub-Logo-ee398b662d42.png" style="width: 70px;"> -->
-    </p>
-             </div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-</html>
+    – <script language='JavaScript'>document.write(tanggallengkap);</script> –
+    <br>
+    © 2024
+</footer>
