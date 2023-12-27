@@ -14,6 +14,10 @@
     var tahun = tgl.getFullYear();
     tanggallengkap = namahari[hari] + ", " +tanggal + " " + namabulan[bulan] + " " + tahun;
     </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <!-- skrip selesai -->
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -25,12 +29,26 @@
 <head>
             <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Mainpage</title>
+    <title>Dzaky Adinata</title>
     <style>
         
         body {
             font-family: monospace;
             text-align: center;            
+        } 
+        .profile {
+            text-align:left;
+        }       
+        .round-frame {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+        }
+        .round-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }   
         a:link {
         color: green;
@@ -91,10 +109,10 @@
 <!-- header selesai -->
 <!-- utama -->
 <body>
-        <p style="margin-bottom: 120px;"></p>
+        <p style="margin-bottom: 110px;"></p>
             <img src="https://raw.githubusercontent.com/kyynata/kucinghitam/main/media/Untitled28_20231227135058.png" alt="kanon sayang" style="width: 150px">
-            <br>
-	<h2>Dzaky Adinata</h2>
+            <p style="margin-bottom: 10px;"></p>           
+            <h2>Dzaky Adinata</h2>
             <p>光る風になろう　We got dream!</p>
             <a class="social-media-icon facebook" href="https://www.facebook.com/adinata.dzaky.1" style="color: #fff">
 	<span class="fab fa-facebook"></span></a>
@@ -112,6 +130,60 @@
 </a>
 <br><br>
 <p><a href="https://kyynata.github.io/kucinghitam/gallery.html">Gallery</a> • <a href="https://kyynata.github.io/kucinghitam/project.html">Project</a></p>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+👋
+</button>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong2">
+📩
+</button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Profile</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            <div class="profile">              
+                <div class="round-frame">
+            <img src="https://raw.githubusercontent.com/Dzaky05/kucinghitam/main/media/FB_IMG_1694165234267.jpg" alt="penggambaran ybs secara rill">
+            </div>
+            <h3>Dzaky Ali Adinata</h3>
+            <p style="color: grey"><i>Illustrator</i></p>                       
+            </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
+        <!--  -->
+        <div class="modal fade" id="exampleModalLong2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle2" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle2">E-mail</h5>                
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            <div class="profile">              
+            <button type="button" class="btn btn-primary"><a href="mailto:adinatadzaky168@gmail.com" style="color: white">Send a E-mail!</a></button>                      
+            </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
 </body>
 <footer>
     <br>
@@ -119,3 +191,4 @@
     <br>
     © 2024
 </footer>
+
